@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Segurança do Trabalho</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="seg.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Jogo de Segurança no Trabalho</h1>
+        <p id="question">Pergunta vai aparecer aqui.</p>
+        <div class="options">
+            <div class="option" onclick="checkAnswer(1)">Resposta 1</div>
+            <div class="option" onclick="checkAnswer(2)">Resposta 2</div>
+            <div class="option" onclick="checkAnswer(3)">Resposta 3</div>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "O que é um DDS, comumente utilizado em ambientes de trabalho?",
+                options: ["Documento de Desempenho e Segurança, usado para incidentes de registradores. ", "Diário de Desenvolvimento Sustentável, utilizado para acompanhar as metas de responsabilidade social da empresa. ", "Diálogo Diário de Segurança, uma reunião curta para discutir questões de segurança no trabalho."],
+                correctAnswer: 3
+            },
+            {
+                question: "O que significa a sigla NR-10?",
+                options: ["Norma Regulamentadora para o setor de alimentos", "Norma Regulamentadora para trabalhos em altura ", "Norma Regulamentadora para segurança em instalações elétricas"],
+                correctAnswer: 3
+            },
+            {
+                question: "Qual é a melhor prática ao fabricar produtos químicos perigosos?",
+                options: ["Utilizar equipamentos de proteção individual", "Armazenar produtos químicos em recipientes não identificados ", "Descartar produtos químicos no lixo comum"],
+                correctAnswer: 1
+            },
+            {
+                question: "Qual é a principal função de um extintor de incêndio?",
+                options: [" Resfriar o fogo", "Retirar o oxigênio do fogo", "Extinguir o fogo"],
+                correctAnswer: 3
+            },
+            {
+                question: "O que é um Risco Biológico no local de trabalho?",
+                options: ["Um vírus no computador", "Uma máquina perigosa", "Agentes patogênicos, como bactérias e vírus"],
+                correctAnswer: 3
+            },
+            {
+                question: "Qual ação deve ser tomada em caso de um derramamento de produtos químicos?",
+                options: ["Ignorar o derramamento", "Avisar seu supervisor e seguir as instruções de segurança", "Fazer uma piada sobre isso"],
+                correctAnswer: 2
+            },
+            {
+                question: "O que significa 'EPC' na segurança do trabalho?",
+                options: ["Equipamento de Proteção Coletiva", "Empresa de Proteção Contra Riscos", "Equipamento de Proteção Contra Riscos"],
+                correctAnswer: 1
+            },
+            {
+                question: "O que é um plano de evacuação?",
+                options: ["Um plano para férias", "Um plano para melhorar a produtividade", "Um plano para evacuar com segurança em caso de emergência"],
+                correctAnswer: 3
+            },
+            {
+                question: "Qual é a principal causa de acidentes de trabalho?",
+                options: ["Falta de café", "Despreparo e descuido", "Má sorte"],
+                correctAnswer: 2
+            },
+            {
+                question: "O que é um DDS (Diálogo Diário de Segurança)?",
+                options: ["Uma reunião para discutir o último episódio de uma série de TV", "Uma conversa informal sobre futebol", "Uma prática para discutir assuntos relacionados à segurança no trabalho"],
+                correctAnswer: 3
+            },
+            {
+                question: "O que é o CIPA (Comissão Interna de Prevenção de Acidentes)?",
+                options: ["Uma sigla enigmática", "Um comitê de planejamento de festas", "Um grupo de funcionários encarregado de promover a segurança no trabalho"],
+                correctAnswer: 3
+            },
+            {
+                question: "Qual a importância da sinalização de segurança no local de trabalho?",
+                options: ["Deixar o local mais bonito", "Alertar para riscos, proibições e orientações", "Não tem importância alguma"],
+                correctAnswer: 2
+            },
+            {
+                question: "O que é um EPC?",
+                options: ["Um item de uso individual", "Um equipamento usado por todos os funcionários", "Um equipamento de proteção pessoal"],
+                correctAnswer: 2
+            }
+];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function displayQuestion() {
+            if (currentQuestion < questions.length) {
+                const questionElement = document.getElementById("question");
+                questionElement.textContent = questions[currentQuestion].question;
+
+                const optionElements = document.querySelectorAll(".option");
+                for (let i = 0; i < optionElements.length; i++) {
+                    optionElements[i].textContent = questions[currentQuestion].options[i];
+                }
+            } else {
+                showResult();
+            }
+        }
+
+        function checkAnswer(selectedOption) {
+            if (selectedOption === questions[currentQuestion].correctAnswer) {
+                score++;
+            }
+
+            currentQuestion++;
+
+            displayQuestion();
+        }
+
+        function showResult() {
+            const container = document.getElementById("container");
+            container.innerHTML = `<h1>Resultado</h1><p>Você acertou ${score} de ${questions.length} perguntas.</p>`;
+        }
+        
+
+        displayQuestion();
+    </script>
+</body>
+</html>
+

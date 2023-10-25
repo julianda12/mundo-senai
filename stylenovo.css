@@ -1,0 +1,106 @@
+body{
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: url(principais-linguagens-de-programacao.png) ;
+  background-image: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body::before{
+  content: '';
+  background-color: rgb(0, 0, 0 .5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+.logo img{
+  height: 45px;
+  width: 167px;
+}
+
+.header{
+  padding: 50px 50px;
+  position: relative;
+  z-index: 10;
+}
+
+
+.login_body{
+  padding: 60px;
+  z-index: 90;
+  position: relative;
+  max-width: 450px;
+  height: 450px;
+  margin-left: 50%;
+  background-color:#ffffffe1;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+
+}
+
+.login_body h2{
+  font-size: 32px;
+  color:#000000;
+  margin-top: 0;
+}
+
+.login_body input{
+  height: 50px;
+  width: 100%;
+  color:#ffffff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.login_body input{
+  background-color: #444;
+}
+
+.input_box{
+  margin-bottom: 25px;
+}
+
+.input_box input{
+  background-color:  #3f6deb;
+}
+
+.login_body button a{
+  text-decoration: none;
+  color:#fff;
+}
+
+.login_body button{
+  height: 50px;
+  width: 100%;
+  color:#fff;
+  background-color: #e50914;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 16px;
+  border:none;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.login_body button:hover{
+background-color: #da0e18;
+cursor: pointer;
+text-decoration: none;
+}
+

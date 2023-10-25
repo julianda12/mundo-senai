@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="info.css">
+    <title>Quiz de Informática</title>
+</head>
+<body>
+
+    <div class="quiz-container" id="quiz-container">
+        <h1>Quiz de Informática</h1>
+        <form id="quiz-form">
+            <div id="question-container">
+                <!-- Questão 1 -->
+                <div class="question" id="q1">
+                    <p>1. O que significa a sigla 'CPU?'</p>
+                    <label><input type="radio" name="q1" value="a"> Central Print Utility</label>
+                    <label><input type="radio" name="q1" value="b"> Computer Programming Unit</label>
+                    <label><input type="radio" name="q1" value="c"> Control Panel Update</label>
+                    <label><input type="radio" name="q1" value="d"> Central Processing Unit</label>
+                    <button type="button" onclick="proximo()">Próxima Pergunta</button>
+                </div>
+                
+                <!-- Questão 2 -->
+                <div class="question" id="q2" style="display:none;">
+                    <p>2. Qual protocolo é comumente usado para enviar e-mails?</p>
+                    <label><input type="radio" name="q2" value="a"> HTTP </label>
+                    <label><input type="radio" name="q2" value="b"> FTP </label>
+                    <label><input type="radio" name="q2" value="c"> SMTP </label>
+                    <label><input type="radio" name="q2" value="d"> POP3 </label>
+                    <button type="button" onclick="proximo()">Próxima Pergunta</button>
+                </div>
+                <!-- Questão 3 -->
+                <div class="question" id="q3" style="display:none;">
+                    <p>3. O que a sigla 'CPU' representa em informática?</p>
+                    <label><input type="radio" name="q3" value="a"> Central Processing Unit </label>
+                    <label><input type="radio" name="q3" value="b"> Computer Programming Unit </label>
+                    <label><input type="radio" name="q3" value="c">Central Print Utility</label>
+                    <label><input type="radio" name="q3" value="d"> Control Panel Update</label>
+                    <button type="button" onclick="proximo()">Próxima Pergunta</button>
+                </div>
+                <!-- Questão 4 -->
+                <div class="question" id="q4" style="display:none;">
+                    <p>4. O que é um arquivo com a extensão '.pdf'?</p>
+                    <label><input type="radio" name="q4" value="a"> Planilha de dados </label>
+                    <label><input type="radio" name="q4" value="b"> Imagem rasterizada</label>
+                    <label><input type="radio" name="q4" value="c"> Documento Portable Document Format </label>
+                    <label><input type="radio" name="q4" value="d"> Vídeo compactado </label>
+                    <button type="button" onclick="proximo()">Próxima Pergunta</button>
+                </div>
+                <!-- Questão 5 -->
+                <div class="question" id="q5" style="display:none;">
+                    <p>5. O que significa 'URL' em informática?</p>
+                    <label>
+                        <input type="radio" name="q5" value="a"> Universal Resource Locator 
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="b"> Universal Remote Link 
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="c"> Uniform Resource Language 
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="d"> User Registration List 
+                    </label>
+                    <button type="button" onclick="proximo()">Próxima Pergunta</button>
+                </div>
+                <!-- Questão 6 -->
+                <div class="question" id="q6" style="display:none;">
+                    <p>6. Qual linguagem de programação é amplamente usada para o desenvolvimento de aplicativos móveis?</p>
+                    <label>
+                        <input type="radio" name="q6" value="a"> Python 
+                    </label>
+                    <label>
+                        <input type="radio" name="q6" value="b"> Java 
+                    </label>
+                    <label>
+                        <input type="radio" name="q6" value="c"> C++ 
+                    </label>
+                    <label>
+                        <input type="radio" name="q6" value="d"> Swift 
+                    </label>
+                    <button type="button" onclick="proximo()">Próxima Pergunta</button>
+                </div>
+                <!-- Questão 7 -->
+                <div class="question" id="q7" style="display:none;">
+                    <p>7. O que é um firewall em termos de segurança de rede?</p>
+                    <label>
+                        <input type="radio" name="q7" value="a"> Uma barreira física em torno de um servidor 
+                    </label>
+                    <label>
+                        <input type="radio" name="q7" value="b"> Um dispositivo que filtra e monitora o tráfego de rede 
+                    </label>
+                    <label>
+                        <input type="radio" name="q7" value="c"> Um programa que cria senhas fortes 
+                    </label>
+                    <label>
+                        <input type="radio" name="q7" value="d"> Um protocolo de segurança SSL 
+                    </label>
+                    <button type="button" onclick="proximo()">Próxima Pergunta</button>
+                </div>
+                <!-- Questão 8 -->
+                <div class="question" id="q8" style="display:none;">
+                    <p>8. O que significa 'WWW' em uma URL, como em 'www.example.com'?</p>
+                    <label>
+                        <input type="radio" name="q8" value="a"> World Wide Web 
+                    </label>
+                    <label>
+                        <input type="radio" name="q8" value="b"> Wireless Web Work 
+                    </label>
+                    <label>
+                        <input type="radio" name="q8" value="c"> Webpage Widespread Widget 
+                    </label>
+                    <label>
+                        <input type="radio" name="q8" value="d"> Web Wizardry Window 
+                    </label>
+                    <button type="button" onclick="proximo()">Próxima Pergunta</button>
+                </div>
+
+                <!-- Resultado -->
+                <div class="resul" id="resultado" style="display:none;">
+                    <h2>Sua Pontuação</h2>
+                    <p id="pontuacao">Pontuação: <span id="pontos">0</span></p>   
+                <button id="inicio" onclick="retornarAoInicio()">Retornar ao Início</button>
+                </div> 
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

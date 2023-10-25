@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url(https://tm.ibxk.com.br/2022/04/25/25151315157481.jpg?ims=1200x675);
+    background-image: cover;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    font-family:'Pixelify Sans', sans-serif;
+}
+
+.jogos1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+.jogos1 img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.jogos1 .neon {
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.jogos2{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;
+}
+.jogos2 img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.jogos2 .neon {
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.topo h1{
+    text-align: center;
+    font-size: 90px;
+    margin: 30px 0;
+}
+.topo p{
+    text-align: center;
+    font-size: 45px;
+    position: absolute;
+    top: 60px;
+    left: 680px;
+
+}
+
+.neon {
+    border: 1px double purple;
+    box-shadow:
+    0 0 5px #000000,
+    0 0 10px #000000,
+    0 0 20px #fffefe,
+    0 0 40px rgb(204, 0, 255),
+    0 0 100px #0ff,
+    0 0 150px rgb(204, 0, 255);
+}
+
+.gerais{
+    margin-top: 100px;
+    
+}
+
+
+.gerais img{
+    width: 20%;
+    margin-left: 750px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.topo{
+    color:aliceblue;
+}
